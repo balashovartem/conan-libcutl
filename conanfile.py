@@ -7,8 +7,8 @@ username = os.getenv("CONAN_USERNAME", "balashovartem")
 class LibCutlConan(ConanFile):
     name = "libcutl"
     version = "1.10.0"
-    license = "<Put the package license here>"
-    url = "<Package recipe repository url here, for issues about the package"
+    license = "MIT"
+    url = "https://github.com/balashovartem/conan-libcutl"
     settings = "os", "compiler", "build_type", "arch"
     generators = "cmake"
     source_tgz = "http://www.codesynthesis.com/download/libcutl/1.10/libcutl-1.10.0.tar.gz"
