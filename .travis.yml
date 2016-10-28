@@ -14,3 +14,8 @@ env:
     - CONAN_CHANNEL="testing"
     - CONAN_TOTAL_PAGES=1
     - CONAN_CURRENT_PAGE=1
+
+install:
+  - ./.travis/install.sh
+script:
+  - ./.travis/run.sh

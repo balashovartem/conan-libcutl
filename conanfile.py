@@ -2,7 +2,7 @@ from conans import ConanFile, CMake, tools, ConfigureEnvironment
 import os
 
 channel = os.getenv("CONAN_CHANNEL", "testing")
-username = os.getenv("CONAN_USERNAME", "balashov.artem")
+username = os.getenv("CONAN_USERNAME", "balashovartem")
 
 class LibCutlConan(ConanFile):
     name = "libcutl"

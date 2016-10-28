@@ -2,7 +2,7 @@ from conans import ConanFile, CMake
 import os
 
 channel = os.getenv("CONAN_CHANNEL", "testing")
-username = os.getenv("CONAN_USERNAME", "balashov.artem")
+username = os.getenv("CONAN_USERNAME", "balashovartem")
 
 class CutlTest(ConanFile):
     settings = "os", "compiler", "arch", "build_type"
