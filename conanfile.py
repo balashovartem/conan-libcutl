@@ -21,8 +21,10 @@ class LibCutlConan(ConanFile):
 
     def build(self):
 	env = ConfigureEnvironment(self.deps_cpp_info, self.settings)
-	self.run(" cd %s/libcutl-1.10.0 && %s ./configure --prefix=%s/install" % (self.conanfile_directory, env.command_line, self.conanfile_directory ) )
-	self.run(" cd %s/libcutl-1.10.0 && %s make install"  % (self.conanfile_directory, env.command_line)  )
+	configure = "cd %s/libcutl-1.10.0 && %s ./configure --prefix=%s/install" % (self.conanfile_directory, env.command_line, self.conanfile_directory ) 
+	self.output.warn(configure)	
+	self.run( configure )
+	self.run("cd %s/libcutl-1.10.0 && %s make install"  % (self.conanfile_directory, env.command_line)  )
 
     def package(self):
         self.copy("*", dst="./", src="install", keep_path=True)
