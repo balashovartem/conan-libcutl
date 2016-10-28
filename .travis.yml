@@ -5,7 +5,6 @@ sudo: required
 language: python
 env:
   matrix:
-    - CONAN_GCC_VERSIONS=5.4 CONAN_USE_DOCKER=1
     - CONAN_GCC_VERSIONS=4.8 CONAN_USE_DOCKER=1
   global:
     - CONAN_UPLOAD=0
