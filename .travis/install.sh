@@ -19,6 +19,7 @@ if [[ "$(uname -s)" == 'Darwin' ]]; then
     pyenv activate conan
 fi
 
-sudo apt-get install pkg-config
+sudo apt-get install --reinstall pkg-config cmake-data
+sudo ldconfig
 pip install conan_package_tools # It install conan too
 conan user
