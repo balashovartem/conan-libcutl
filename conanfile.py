@@ -29,3 +29,5 @@ class LibCutlConan(ConanFile):
     def package(self):
         self.copy("*", dst="./", src="install", keep_path=True)
 
+    def package_info(self):
+        self.cpp_info.libs = ['cutl'] 
